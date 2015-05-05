@@ -54,9 +54,10 @@
         android:id="@+id/button5"
         android:onClick="addPin"
         android:background="@drawable/button_blue"
-        android:layout_marginTop="46dp"
+        android:layout_marginTop="39dp"
         android:layout_below="@+id/pin2Txt"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignLeft="@+id/textView12"
+        android:layout_alignStart="@+id/textView12" />
 
     <Spinner
         android:layout_width="100dp"
