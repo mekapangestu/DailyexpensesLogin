@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Daily expenses</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_pemasukan">PemasukanActivity</string>
+    <string name="title_activity_splash_screen">SplashScreen</string>
+    <string name="title_activity_tambah_pemasukan">TambahPemasukan</string>
+    <string name="title_activity_pengeluaran">PengeluaranActivity</string>
+    <string name="title_activity_tambah_pengeluaran">TambahPengeluaran</string>
+    <string name="title_activity_setting">Setting</string>
+    <string name="title_activity_kategori_pemasukan">KategoriPemasukan</string>
+    <string name="title_activity_kategori_pengeluaran">KategoriPengeluaran</string>
+    <string name="title_activity_cash_flow">CashFlow</string>
+    <string name="title_activity_laporan_tanggal">LaporanTanggal</string>
+    <string name="title_activity_pengeluaran_sering">PengeluaranSering</string>
+    <string name="title_activity_pin">Pin</string>
+    <string name="title_activity_login">Login</string>
+    <string name="title_activity_kategori_pemasukan_rutin">Kategori Pemasukan Rutin</string>
+    <string name="title_activity_kategori_pengeluaran_rutin">Kategori Pengeluaran Rutin</string>
+    <string name="title_activity_pemasukan_rutin">PemasukanRutin</string>
+    <string name="title_activity_tambah_pemasukan_rutin">Tambah Pemasukan Rutin</string>
+    <string name="title_activity_tambah_pengeluaran_rutin">TambahPengeluaranRutin</string>
+    <string name="title_activity_pengeluaran_rutin">Pengeluaran Rutin</string>
+</resources>

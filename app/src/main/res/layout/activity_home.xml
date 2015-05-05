@@ -1,0 +1,241 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".HomeActivity"
+    android:touchscreenBlocksFocus="true"
+    android:background="@android:color/background_light">
+
+    <ImageButton
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:id="@+id/imageButton"
+        android:background="@mipmap/im"
+        android:onClick="openPemasukan"
+        android:layout_marginTop="52dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageButton
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:id="@+id/imageButton3"
+        android:background="@mipmap/report"
+        android:onClick="openLaporan"
+        android:layout_alignLeft="@+id/imageButton4"
+        android:layout_alignStart="@+id/imageButton4"
+        android:layout_alignTop="@+id/imageButton9" />
+
+    <ImageButton
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:id="@+id/imageButton4"
+        android:onClick="openCashFlow"
+        android:background="@mipmap/cashflow"
+        android:layout_alignTop="@+id/imageButton"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageButton
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:id="@+id/imageButton9"
+        android:background="@mipmap/pemasukanrutin"
+        android:layout_marginTop="47dp"
+        android:layout_below="@+id/imageButton"
+        android:layout_alignLeft="@+id/imageButton"
+        android:layout_alignStart="@+id/imageButton"
+        android:onClick="openPemasukanRutin" />
+
+    <ImageButton
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:id="@+id/imageButton2"
+        android:background="@mipmap/export"
+        android:onClick="openPengeluaran"
+        android:layout_alignTop="@+id/imageButton4"
+        android:layout_centerHorizontal="true" />
+
+    <ImageButton
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:id="@+id/imageButton8"
+        android:background="@mipmap/pengeluaranrutin"
+        android:layout_alignTop="@+id/imageButton3"
+        android:layout_centerHorizontal="true"
+        android:onClick="openPengeluaranRutin" />
+
+    <ImageButton
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:id="@+id/imageButton7"
+        android:background="@mipmap/sinc"
+        android:layout_below="@+id/imageButton3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="54dp" />
+
+    <ImageButton
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:id="@+id/imageButton10"
+        android:background="@mipmap/reminder"
+        android:layout_alignBottom="@+id/imageButton7"
+        android:layout_alignLeft="@+id/imageButton9"
+        android:layout_alignStart="@+id/imageButton9" />
+
+    <ImageButton
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:id="@+id/imageButton11"
+        android:background="@mipmap/info"
+        android:layout_alignTop="@+id/imageButton7"
+        android:layout_alignRight="@+id/imageButton3"
+        android:layout_alignEnd="@+id/imageButton3" />
+
+    <ImageButton
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:id="@+id/imageButton12"
+        android:onClick="openSetting"
+        android:background="@mipmap/setting"
+        android:layout_below="@+id/imageButton7"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="49dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Pemasukan"
+        android:id="@+id/textView13"
+        android:layout_below="@+id/imageButton"
+        android:textSize="12dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Pengeluaran"
+        android:id="@+id/textView14"
+        android:textSize="12dp"
+        android:layout_below="@+id/imageButton4"
+        android:layout_alignLeft="@+id/imageButton2"
+        android:layout_alignStart="@+id/imageButton2"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Cashflow"
+        android:id="@+id/textView15"
+        android:textSize="12dp"
+        android:layout_alignTop="@+id/textView14"
+        android:layout_alignLeft="@+id/imageButton4"
+        android:layout_alignStart="@+id/imageButton4"
+        android:textStyle="bold"
+        android:layout_alignRight="@+id/imageButton4"
+        android:layout_alignEnd="@+id/imageButton4"
+        android:gravity="center" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Pemasukan Rutin"
+        android:id="@+id/textView16"
+        android:textSize="12dp"
+        android:layout_below="@+id/imageButton9"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="false"
+        android:layout_alignRight="@+id/imageButton9"
+        android:layout_alignEnd="@+id/imageButton9" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Pengeluaran Rutin"
+        android:id="@+id/textView17"
+        android:textSize="12dp"
+        android:layout_alignTop="@+id/textView16"
+        android:layout_alignLeft="@+id/imageButton8"
+        android:layout_alignStart="@+id/imageButton8"
+        android:layout_alignRight="@+id/textView14"
+        android:layout_alignEnd="@+id/textView14"
+        android:textStyle="bold"
+        android:gravity="center" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Laporan Keuangan"
+        android:id="@+id/textView18"
+        android:textSize="12dp"
+        android:layout_alignTop="@+id/textView17"
+        android:layout_alignLeft="@+id/imageButton3"
+        android:layout_alignStart="@+id/imageButton3"
+        android:layout_alignRight="@+id/imageButton3"
+        android:layout_alignEnd="@+id/imageButton3"
+        android:textStyle="bold"
+        android:gravity="center" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Pengingat"
+        android:id="@+id/textView19"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_alignTop="@+id/textView20"
+        android:layout_alignRight="@+id/imageButton10"
+        android:layout_alignEnd="@+id/imageButton10"
+        android:layout_alignLeft="@+id/textView16"
+        android:layout_alignStart="@+id/textView16" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Sinkronisasi"
+        android:id="@+id/textView20"
+        android:textSize="12dp"
+        android:layout_below="@+id/imageButton7"
+        android:layout_alignLeft="@+id/imageButton7"
+        android:layout_alignStart="@+id/imageButton7"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Info"
+        android:id="@+id/textView21"
+        android:textSize="12dp"
+        android:layout_alignTop="@+id/textView20"
+        android:layout_alignLeft="@+id/imageButton11"
+        android:layout_alignStart="@+id/imageButton11"
+        android:layout_marginLeft="21dp"
+        android:layout_marginStart="21dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Setting"
+        android:id="@+id/textView22"
+        android:textSize="12dp"
+        android:layout_below="@+id/imageButton12"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold" />
+
+</RelativeLayout>

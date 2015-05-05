@@ -1,0 +1,176 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="android.dailyexpenses.unpas.dailyexpenses.TambahPemasukan"
+    android:background="#ffdddad2">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Kategori :"
+        android:id="@+id/entryNama"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Nominal :"
+        android:id="@+id/textView3"
+        android:inputType="textCapCharacters"
+        android:layout_below="@+id/spinner"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:id="@+id/jumlahInput"
+        android:inputType="number"
+        android:layout_below="@+id/textView3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="#ffffffff" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Keterangan : "
+        android:id="@+id/entryJumlah"
+        android:inputType="textCapCharacters"
+        android:layout_below="@+id/jumlahInput"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:id="@+id/deskInput"
+        android:layout_below="@+id/entryJumlah"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="#ffffffff" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="simpan"
+        android:id="@+id/button"
+        android:onClick="addNewPemasukan"
+        android:background="@drawable/button_blue"
+        android:layout_alignTop="@+id/button2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:gravity="center"
+        android:textColor="#ffffffff" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Keluar"
+        android:id="@+id/button2"
+        android:onClick="closeNewPemasukan"
+        android:background="@drawable/button_green"
+        android:layout_marginTop="71dp"
+        android:layout_below="@+id/txtDate"
+        android:layout_toRightOf="@+id/entryJumlah"
+        android:layout_toEndOf="@+id/entryJumlah"
+        android:gravity="center"
+        android:textColor="#ffffffff" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Tanggal : "
+        android:id="@+id/textView"
+        android:layout_below="@+id/deskInput"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Spinner
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:id="@+id/spinner"
+        android:layout_below="@+id/entryNama"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="#ffffffff" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:id="@+id/txtDate"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="#ffffffff"
+        android:inputType="date"
+        android:editable="true"
+        android:enabled="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Jam"
+        android:id="@+id/textView4"
+        android:layout_below="@+id/txtDate"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:id="@+id/txtTime"
+        android:inputType="time"
+        android:layout_below="@+id/textView4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="#ffffffff"
+        android:enabled="true"
+        android:editable="true" />
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="Tanggal"
+        android:id="@+id/btnCalendar"
+        android:background="@drawable/button_blue"
+        android:layout_above="@+id/button2"
+        android:layout_alignLeft="@+id/btnTimePicker"
+        android:layout_alignStart="@+id/btnTimePicker"
+        android:gravity="center"
+        android:textColor="#ffffffff" />
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="Jam"
+        android:id="@+id/btnTimePicker"
+        android:background="@drawable/button_blue"
+        android:layout_alignTop="@+id/txtTime"
+        android:layout_toRightOf="@+id/txtTime"
+        android:layout_toEndOf="@+id/txtTime"
+        android:layout_marginLeft="22dp"
+        android:layout_marginStart="22dp"
+        android:gravity="center"
+        android:textColor="#ffffffff" />
+
+    <ImageButton
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/imageButton6"
+        android:layout_alignTop="@+id/spinner"
+        android:layout_alignLeft="@+id/btnCalendar"
+        android:layout_alignStart="@+id/btnCalendar"
+        android:background="@mipmap/plus"
+        android:onClick="openKategoriPemasukan" />
+
+</RelativeLayout>
