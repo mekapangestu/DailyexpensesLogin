@@ -13,7 +13,7 @@
         android:id="@+id/imageButton"
         android:background="@mipmap/im"
         android:onClick="openPemasukan"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="55dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
@@ -83,7 +83,8 @@
         android:background="@mipmap/reminder"
         android:layout_alignBottom="@+id/imageButton7"
         android:layout_alignLeft="@+id/imageButton9"
-        android:layout_alignStart="@+id/imageButton9" />
+        android:layout_alignStart="@+id/imageButton9"
+        android:onClick="openReminder" />
 
     <ImageButton
         android:layout_width="64dp"
@@ -111,6 +112,8 @@
         android:text="Pemasukan"
         android:id="@+id/textView13"
         android:layout_below="@+id/imageButton"
+        android:layout_alignRight="@+id/imageButton"
+        android:layout_alignEnd="@+id/imageButton"
         android:textSize="12dp"
         android:textStyle="bold" />
 
@@ -134,27 +137,27 @@
         android:id="@+id/textView15"
         android:textSize="12dp"
         android:layout_alignTop="@+id/textView14"
-        android:layout_alignLeft="@+id/imageButton4"
-        android:layout_alignStart="@+id/imageButton4"
-        android:textStyle="bold"
         android:layout_alignRight="@+id/imageButton4"
         android:layout_alignEnd="@+id/imageButton4"
-        android:gravity="center" />
+        android:layout_alignLeft="@+id/imageButton4"
+        android:layout_alignStart="@+id/imageButton4"
+        android:textStyle="bold" />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Pemasukan Rutin"
         android:id="@+id/textView16"
         android:textSize="12dp"
         android:layout_below="@+id/imageButton9"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="false"
+        android:layout_alignLeft="@+id/textView13"
+        android:layout_alignStart="@+id/textView13"
         android:layout_alignRight="@+id/imageButton9"
-        android:layout_alignEnd="@+id/imageButton9" />
+        android:layout_alignEnd="@+id/imageButton9"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:gravity="center" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -193,13 +196,12 @@
         android:text="Pengingat"
         android:id="@+id/textView19"
         android:textSize="12dp"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:layout_alignTop="@+id/textView20"
-        android:layout_alignRight="@+id/imageButton10"
-        android:layout_alignEnd="@+id/imageButton10"
+        android:onClick="openReminder"
+        android:layout_below="@+id/imageButton10"
         android:layout_alignLeft="@+id/textView16"
-        android:layout_alignStart="@+id/textView16" />
+        android:layout_alignStart="@+id/textView16"
+        android:textStyle="bold"
+        android:gravity="center" />
 
     <TextView
         android:layout_width="wrap_content"

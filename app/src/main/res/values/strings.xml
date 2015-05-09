@@ -22,4 +22,5 @@
     <string name="title_activity_tambah_pemasukan_rutin">Tambah Pemasukan Rutin</string>
     <string name="title_activity_tambah_pengeluaran_rutin">TambahPengeluaranRutin</string>
     <string name="title_activity_pengeluaran_rutin">Pengeluaran Rutin</string>
+    <string name="title_activity_reminder">Reminder</string>
 </resources>

@@ -28,13 +28,14 @@ public class CashFlow extends ActionBarActivity {
         if (kampusList.size() != 0) {
 
             ListAdapter adapter = new SimpleAdapter(CashFlow.this,
-                    kampusList, R.layout.layout_cashflow, new String[] {
-                    "nama_pemasukan", "jumlah_pemasukan", "deskripsi_pemasukan","tanggal_pemasukan","jam_pemasukan" }, new int[] {
-                    R.id.namaTxt, R.id.jumlahTxt, R.id.deskTxt,R.id.tglTxt,R.id.jamTxt });
+                    kampusList, R.layout.layout_cashflow, new String[]{
+                    "nama_pemasukan", "jumlah_pemasukan", "deskripsi_pemasukan", "tanggal_pemasukan", "jam_pemasukan"}, new int[]{
+                    R.id.namaTxt, R.id.jumlahTxt, R.id.deskTxt, R.id.tglTxt, R.id.jamTxt});
 
             ListView lv = (ListView) findViewById(R.id.listViewC);
             lv.setAdapter(adapter);
         }
+        
     }
 
 

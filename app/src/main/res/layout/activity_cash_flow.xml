@@ -14,7 +14,7 @@
         android:layout_gravity="center"
         android:textSize="25dp"
         android:gravity="center"
-        android:background="@drawable/button_blue"
+        android:background="#FF16A085"
         android:textColor="#ffffffff" />
 
     <ListView

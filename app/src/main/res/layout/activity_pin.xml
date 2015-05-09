@@ -14,9 +14,10 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Masukan PIN :"
         android:id="@+id/textView9"
-        android:layout_marginTop="53dp"
-        android:layout_below="@+id/spinnerPin"
-        android:layout_centerHorizontal="true" />
+        android:layout_marginTop="137dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -24,9 +25,10 @@
         android:inputType="numberPassword"
         android:ems="10"
         android:id="@+id/pinTxt"
-        android:background="#ffffffff"
         android:layout_below="@+id/textView9"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="#ffffffff" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -34,8 +36,9 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Ulangi PIN :"
         android:id="@+id/textView10"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_below="@+id/pinTxt"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -43,9 +46,10 @@
         android:inputType="numberPassword"
         android:ems="10"
         android:id="@+id/pin2Txt"
-        android:background="#ffffffff"
         android:layout_below="@+id/textView10"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="#ffffffff" />
 
     <Button
         android:layout_width="wrap_content"
@@ -54,10 +58,10 @@
         android:id="@+id/button5"
         android:onClick="addPin"
         android:background="@drawable/button_blue"
-        android:layout_marginTop="39dp"
+        android:layout_marginTop="48dp"
         android:layout_below="@+id/pin2Txt"
-        android:layout_alignLeft="@+id/textView12"
-        android:layout_alignStart="@+id/textView12" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <Spinner
         android:layout_width="100dp"

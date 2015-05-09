@@ -18,6 +18,7 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
 import java.util.Calendar;
 import java.util.List;
@@ -144,14 +145,15 @@ public class TambahPemasukanRutin extends ActionBarActivity implements View.OnCl
         jamEdit = (EditText) findViewById(R.id.txtTime);
         String jam = jamEdit.getText().toString();
 
-        db.tambahPemasukanRutin(nama, jumlah, desk, tgl, jam);
-        System.out.println("dari addNewPemasukan");
-        System.out.println(nama);
-        System.out.println(jumlah);
-        System.out.println(desk);
-        System.out.println(tgl);
-        System.out.println(jam);
-        this.callHomePage(view);
+        if(desk.matches("") || tgl.matches("") || jam.matches("") || jumlah == 0) {
+            Toast.makeText(getApplicationContext(), "Input tidak boleh kosong",
+                    Toast.LENGTH_SHORT).show();
+            return;
+        }else{
+            db.tambahPemasukanRutin(nama, jumlah, desk, tgl, jam);
+            this.callHomePage(view);
+        }
+
 
 
     }
@@ -171,7 +173,7 @@ public class TambahPemasukanRutin extends ActionBarActivity implements View.OnCl
             // current date
             final Calendar c = Calendar.getInstance();
             mYear = c.get(Calendar.YEAR);
-            mMinute = c.get(Calendar.MONTH);
+            mMonth = c.get(Calendar.MONTH);
             mDay = c.get(Calendar.DAY_OF_MONTH);
 
             // dialog

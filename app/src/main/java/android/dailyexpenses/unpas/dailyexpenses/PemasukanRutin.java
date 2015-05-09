@@ -14,9 +14,11 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 
 public class PemasukanRutin extends ActionBarActivity {
@@ -76,10 +78,16 @@ public class PemasukanRutin extends ActionBarActivity {
         builderDelete.show();
     }
 
-    public void tambahPemasukanRutin(View view){
-        Intent intent= new Intent(getApplication(),TambahPemasukanRutin.class);
-        startActivity(intent);
-
+    public void tambahPemasukanRutin(View view) {
+        List<String> pemesanan_spinner = db.getAllSpinnerPemasukanRutin();
+        if (pemesanan_spinner.size() == 0){
+            Toast.makeText(getApplicationContext(), "Tambah kategori terlebih dahulu",
+                    Toast.LENGTH_SHORT).show();
+        return;
+        }else{
+            Intent intent= new Intent(getApplication(),TambahPemasukanRutin.class);
+            startActivity(intent);
+        }
     }
 
     @Override

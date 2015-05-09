@@ -18,6 +18,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.view.View.OnClickListener;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
 import java.util.Calendar;
 import java.util.List;
@@ -147,14 +148,16 @@ public class TambahPemasukan extends ActionBarActivity implements OnClickListene
         jamEdit = (EditText) findViewById(R.id.txtTime);
         String jam = jamEdit.getText().toString();
 
-        db.tambahPemasukan(nama,jumlah,desk,tgl,jam);
-        System.out.println("dari addNewPemasukan");
-        System.out.println(nama);
-        System.out.println(jumlah);
-        System.out.println(desk);
-        System.out.println(tgl);
-        System.out.println(jam);
-        this.callHomePage(view);
+        if(desk.matches("") || tgl.matches("") || jam.matches("") || jumlah == 0) {
+            Toast.makeText(getApplicationContext(), "Input tidak boleh kosong",
+                    Toast.LENGTH_SHORT).show();
+            return;
+        }else{
+            db.tambahPemasukan(nama,jumlah,desk,tgl,jam);
+            this.callHomePage(view);
+        }
+
+
 
 
     }
@@ -174,7 +177,7 @@ public class TambahPemasukan extends ActionBarActivity implements OnClickListene
             // current date
             final Calendar c = Calendar.getInstance();
             mYear = c.get(Calendar.YEAR);
-            mMinute = c.get(Calendar.MONTH);
+            mMonth = c.get(Calendar.MONTH);
             mDay = c.get(Calendar.DAY_OF_MONTH);
 
             // dialog

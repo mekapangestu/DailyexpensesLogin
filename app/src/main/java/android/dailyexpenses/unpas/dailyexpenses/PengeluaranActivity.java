@@ -21,9 +21,11 @@ import android.widget.TableRow;
 import android.widget.TextView;
 import android.support.v4.view.ViewPager.LayoutParams;
 import android.view.View.OnClickListener;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 
 public class PengeluaranActivity extends ActionBarActivity{
@@ -85,8 +87,15 @@ public class PengeluaranActivity extends ActionBarActivity{
     }
 
     public void tambahPengeluaran(View view){
-        Intent intent= new Intent(getApplication(),TambahPengeluaran.class);
-        startActivity(intent);
+        List<String> pemesanan_spinner = sqLiteHelper.getAllSpinnerPengeluaran();
+        if (pemesanan_spinner.size() == 0){
+            Toast.makeText(getApplicationContext(), "Tambah kategori terlebih dahulu",
+                    Toast.LENGTH_SHORT).show();
+            return;
+        }else{
+            Intent intent= new Intent(getApplication(),TambahPengeluaran.class);
+            startActivity(intent);
+        }
     }
 
     public void openKategoriPengeluaran(View view){

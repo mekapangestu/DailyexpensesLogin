@@ -6,7 +6,7 @@
     android:background="#ff000000">
 
     <ImageView
-        android:layout_width="320dp"
+        android:layout_width="260dp"
         android:layout_height="130dp"
         android:id="@+id/imageView"
         android:background="@mipmap/cs"
@@ -20,9 +20,9 @@
         android:text="Andro!d"
         android:id="@+id/textView6"
         android:textColor="#ffffffff"
-        android:layout_marginTop="30dp"
+        android:textSize="15dp"
         android:layout_below="@+id/imageView"
         android:layout_centerHorizontal="true"
-        android:textSize="20dp" />
+        android:layout_marginTop="15dp" />
 
 </RelativeLayout>

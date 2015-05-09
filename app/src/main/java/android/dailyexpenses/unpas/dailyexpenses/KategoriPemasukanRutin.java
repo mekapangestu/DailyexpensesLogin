@@ -85,6 +85,7 @@ public class KategoriPemasukanRutin extends ActionBarActivity {
             closeContextMenu();
             alert.setText("");
             this.back(view);
+            System.out.println("tes");
         }
     }
 

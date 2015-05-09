@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -18,10 +19,12 @@ public class SQLiteHelper extends SQLiteOpenHelper {
     private static final String NAMA_DATABASE = "ujicoba";
     private static final int VERSI_DB = 1;
     private static final String QUERY_BUAT_TABEL_PEMASUKAN = "CREATE TABLE IF NOT EXISTS tabel_pemasukan(id_pemasukan INTEGER PRIMARY KEY AUTOINCREMENT, nama_pemasukan TEXT,jumlah_pemasukan INTEGER,deskripsi_pemasukan TEXT,tanggal_pemasukan TEXT,jam_pemasukan TEXT)";
+    private static final String QUERY_BUAT_TABEL_REMINDER = "CREATE TABLE IF NOT EXISTS tabel_reminder(id_reminder INTEGER PRIMARY KEY AUTOINCREMENT,tanggal_reminder TEXT,pesan_reminder TEXT)";
     private static final String QUERY_BUAT_TABEL_PENGELUARAN = "CREATE TABLE IF NOT EXISTS tabel_pengeluaran(id_pengeluaran INTEGER PRIMARY KEY AUTOINCREMENT, nama_pengeluaran TEXT,jumlah_pengeluaran INTEGER,deskripsi_pengeluaran TEXT,tanggal_pengeluaran TEXT,jam_pengeluaran TEXT)";
     private static final String QUERY_BUAT_TABEL_PEMASUKAN_RUTIN = "CREATE TABLE IF NOT EXISTS tabel_pemasukan_rutin(id_pemasukan INTEGER PRIMARY KEY AUTOINCREMENT, nama_pemasukan TEXT,jumlah_pemasukan INTEGER,deskripsi_pemasukan TEXT,tanggal_pemasukan TEXT,jam_pemasukan TEXT)";
     private static final String QUERY_BUAT_TABEL_PENGELUARAN_RUTIN = "CREATE TABLE IF NOT EXISTS tabel_pengeluaran_rutin(id_pengeluaran INTEGER PRIMARY KEY AUTOINCREMENT, nama_pengeluaran TEXT,jumlah_pengeluaran INTEGER,deskripsi_pengeluaran TEXT,tanggal_pengeluaran TEXT,jam_pengeluaran TEXT)";
     private static final String QUERY_HAPUS_SPINNER_PEMASUKAN = "DROP TABLE IF EXISTS pemasukan_spinner";
+    private static final String QUERY_HAPUS_REMINDER = "DROP TABLE IF EXISTS tabel_reminder";
     private static final String QUERY_HAPUS_SPINNER_PENGELUARAN = "DROP TABLE IF EXISTS pengeluaran_spinner";
     private static final String QUERY_HAPUS_SPINNER_PEMASUKAN_RUTIN = "DROP TABLE IF EXISTS pemasukan_rutin_spinner";
     private static final String QUERY_HAPUS_SPINNER_PENGELUARAN_RUTIN = "DROP TABLE IF EXISTS pengeluaran_rutin_spinner";
@@ -51,6 +54,7 @@ public class SQLiteHelper extends SQLiteOpenHelper {
         db.execSQL(QUERY_SPINNER_PEMASUKAN_RUTIN);
         db.execSQL(QUERY_SPINNER_PENGELUARAN_RUTIN);
         db.execSQL(QUERY_BUAT_TABEL_PIN);
+        db.execSQL(QUERY_BUAT_TABEL_REMINDER);
         System.out.println("tabel berhasil di buat");
     }
 
@@ -65,6 +69,7 @@ public class SQLiteHelper extends SQLiteOpenHelper {
         db.execSQL(QUERY_HAPUS_SPINNER_PEMASUKAN);
         db.execSQL(QUERY_HAPUS_SPINNER_PENGELUARAN);
         db.execSQL(QUERY_HAPUS_TABEL_PIN);
+        db.execSQL(QUERY_HAPUS_REMINDER);
         onCreate(db);
         System.out.println("tabel berhasil di hapus");
     }
@@ -88,6 +93,15 @@ public class SQLiteHelper extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
         values.put("pin",pin);
         database.insert("tabel_pin",null,values);
+        database.close();
+    }
+
+    public void tambahReminder(String tanggal,String pesan){
+        SQLiteDatabase database = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("tanggal_reminder",tanggal);
+        values.put("pesan_reminder",pesan);
+        database.insert("tabel_reminder",null,values);
         database.close();
     }
 
@@ -168,6 +182,7 @@ public class SQLiteHelper extends SQLiteOpenHelper {
 
 
         Cursor cursor = database.rawQuery("SELECT * FROM tabel_pemasukan",null);
+
 
         if (cursor.moveToFirst()){
             do {
@@ -406,6 +421,24 @@ public class SQLiteHelper extends SQLiteOpenHelper {
         return labels;
     }
 
+    public ArrayList<HashMap<String,String>> getAllReminder(){
+        ArrayList<HashMap<String,String>> labels;
+        labels =  new ArrayList<>();
+        String query = "SELECT * FROM tabel_reminder";
+        SQLiteDatabase database = this.getWritableDatabase();
+        Cursor cursor = database.rawQuery(query,null);
+        if (cursor.moveToFirst()){
+            do {
+                HashMap<String,String> map = new HashMap<>();
+                map.put("id_reminder",cursor.getString(0));
+                map.put("tanggal_reminder",cursor.getString(1));
+                map.put("pesan_reminder",cursor.getString(2));
+                labels.add(map);
+            }while (cursor.moveToNext());
+        }
+        return labels;
+    }
+
     public ArrayList<HashMap<String,String>> pengeluaranSering(){
         ArrayList<HashMap<String,String>> ps;
         ps = new ArrayList<>();
@@ -508,6 +541,13 @@ public class SQLiteHelper extends SQLiteOpenHelper {
     public void hapusKategoriPengeluaranRutin(int id) {
         SQLiteDatabase database = this.getWritableDatabase();
         database.execSQL("DELETE FROM  pengeluaran_rutin_spinner WHERE id='" + id + "'");
+        database.close();
+    }
+
+    public void hapusReminder(int id) {
+
+        SQLiteDatabase database = this.getWritableDatabase();
+        database.execSQL("DELETE FROM  tabel_reminder WHERE id_reminder='" + id + "'");
         database.close();
     }
 //    ==============================================================================================
