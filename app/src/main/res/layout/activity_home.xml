@@ -93,7 +93,8 @@
         android:background="@mipmap/info"
         android:layout_alignTop="@+id/imageButton7"
         android:layout_alignRight="@+id/imageButton3"
-        android:layout_alignEnd="@+id/imageButton3" />
+        android:layout_alignEnd="@+id/imageButton3"
+        android:onClick="openInfo" />
 
     <ImageButton
         android:layout_width="64dp"

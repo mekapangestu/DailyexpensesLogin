@@ -1,0 +1,389 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="android.dailyexpenses.unpas.dailyexpenses.Info"
+    android:background="#ffffffff">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="right"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/imageView2"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@mipmap/im" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Pemasukan"
+                    android:id="@+id/textView25"
+                    android:textSize="30dp"
+                    android:layout_toRightOf="@+id/imageView2"
+                    android:layout_toEndOf="@+id/imageView2"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="-5dp"
+                    android:textStyle="bold|italic"
+                    android:textColor="#ff16a085" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Fitur ini untuk menyimpan pemasukan keuangan ke dalam aplikasi"
+                    android:id="@+id/textView27"
+                    android:layout_below="@+id/imageView2"
+                    android:layout_toRightOf="@+id/imageView2"
+                    android:layout_toEndOf="@+id/imageView2"
+                    android:background="#190a0706"
+                    android:layout_marginTop="10dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/imageView3"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@mipmap/export"
+                    android:layout_marginTop="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Pengeluaran"
+                    android:id="@+id/textView28"
+                    android:textSize="30dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/imageView3"
+                    android:layout_toEndOf="@+id/imageView3"
+                    android:textStyle="bold|italic"
+                    android:textColor="#ff16a085" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Fitur ini untuk menyimpan pengeluaran keuangan ke dalam aplikasi"
+                    android:id="@+id/textView29"
+                    android:background="#190a0706"
+                    android:layout_below="@+id/imageView3"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toRightOf="@+id/imageView3"
+                    android:layout_toEndOf="@+id/imageView3"
+                    android:layout_marginTop="10dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/imageView4"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@mipmap/pemasukanrutin"
+                    android:layout_below="@+id/scrollView"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Pemasukan Rutin"
+                    android:id="@+id/textView30"
+                    android:textSize="30dp"
+                    android:layout_alignTop="@+id/imageView4"
+                    android:layout_toRightOf="@+id/imageView4"
+                    android:layout_toEndOf="@+id/imageView4"
+                    android:layout_marginTop="-5dp"
+                    android:textStyle="bold|italic"
+                    android:textColor="#ff16a085" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Fitur ini untuk menyimpan pemasukan keuangan tetap ke dalam aplikasi"
+                    android:id="@+id/textView31"
+                    android:background="#190a0706"
+                    android:layout_below="@+id/textView30"
+                    android:layout_alignLeft="@+id/textView30"
+                    android:layout_alignStart="@+id/textView30"
+                    android:layout_marginTop="10dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/imageView5"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@mipmap/pengeluaranrutin"
+                    android:layout_below="@+id/scrollView"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Pengeluaran Rutin"
+                    android:id="@+id/textView32"
+                    android:textSize="30dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/imageView5"
+                    android:layout_toEndOf="@+id/imageView5"
+                    android:layout_marginTop="0dp"
+                    android:textStyle="bold|italic"
+                    android:textColor="#ff16a085" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Fitur ini untuk menyimpan pengeluaran keuangan tetap ke dalam aplikasi"
+                    android:id="@+id/textView33"
+                    android:background="#190a0706"
+                    android:layout_below="@+id/imageView5"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toRightOf="@+id/imageView5"
+                    android:layout_toEndOf="@+id/imageView5"
+                    android:layout_marginTop="10dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/imageView6"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@mipmap/cashflow"
+                    android:layout_below="@+id/scrollView"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Cashflow"
+                    android:id="@+id/textView34"
+                    android:textSize="30dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/imageView6"
+                    android:layout_toEndOf="@+id/imageView6"
+                    android:textStyle="bold|italic"
+                    android:textColor="#ff16a085" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Fitur yang menunjukan detail penggunaan keuangan"
+                    android:id="@+id/textView35"
+                    android:background="#190a0706"
+                    android:layout_below="@+id/imageView6"
+                    android:layout_toRightOf="@+id/imageView6"
+                    android:layout_toEndOf="@+id/imageView6"
+                    android:layout_marginTop="10dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/imageView7"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@mipmap/report"
+                    android:layout_marginTop="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Laporan"
+                    android:id="@+id/textView36"
+                    android:textSize="30dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/imageView7"
+                    android:layout_toEndOf="@+id/imageView7"
+                    android:textStyle="bold|italic"
+                    android:textColor="#ff16a085" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Fitur yang menunjukan detail keuangan per periode"
+                    android:id="@+id/textView37"
+                    android:background="#190a0706"
+                    android:layout_below="@+id/imageView7"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toRightOf="@+id/imageView7"
+                    android:layout_toEndOf="@+id/imageView7"
+                    android:layout_marginTop="10dp"
+                    android:autoText="false" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/imageView8"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@mipmap/reminder"
+                    android:layout_marginTop="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Reminder"
+                    android:id="@+id/textView38"
+                    android:textSize="30dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/imageView8"
+                    android:layout_toEndOf="@+id/imageView8"
+                    android:textStyle="bold|italic"
+                    android:textColor="#ff16a085" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Fitur yang menunjukan detail keuangan per periode"
+                    android:id="@+id/textView39"
+                    android:background="#190a0706"
+                    android:layout_below="@+id/imageView8"
+                    android:layout_toRightOf="@+id/imageView8"
+                    android:layout_toEndOf="@+id/imageView8"
+                    android:layout_marginTop="10dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/imageView9"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@mipmap/sinc"
+                    android:layout_marginTop="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Sinkronisasi"
+                    android:id="@+id/textView40"
+                    android:textSize="30dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/imageView9"
+                    android:layout_toEndOf="@+id/imageView9"
+                    android:textStyle="bold|italic"
+                    android:textColor="#ff16a085" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Fitur untuk sinkronisasi dengan database server"
+                    android:id="@+id/textView41"
+                    android:background="#190a0706"
+                    android:layout_below="@+id/imageView9"
+                    android:layout_toRightOf="@+id/imageView9"
+                    android:layout_toEndOf="@+id/imageView9"
+                    android:layout_marginTop="10dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/imageView10"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@mipmap/setting"
+                    android:layout_marginTop="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Setting"
+                    android:id="@+id/textView42"
+                    android:textSize="30dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/imageView10"
+                    android:layout_toEndOf="@+id/imageView10"
+                    android:textStyle="bold|italic"
+                    android:textColor="#ff16a085" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Fitur untuk menambah kategori baru untuk setiap transaksi dan set PIN"
+                    android:id="@+id/textView43"
+                    android:background="#190a0706"
+                    android:layout_below="@+id/textView42"
+                    android:layout_alignLeft="@+id/textView42"
+                    android:layout_alignStart="@+id/textView42"
+                    android:layout_marginTop="10dp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

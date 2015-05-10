@@ -169,6 +169,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="android.dailyexpenses.unpas.dailyexpenses.HomeActivity" />
         </activity>
+        <activity
+            android:name=".Info"
+            android:label="@string/title_activity_info"
+            android:parentActivityName=".HomeActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.dailyexpenses.unpas.dailyexpenses.HomeActivity" />
+        </activity>
     </application>
 
 </manifest>

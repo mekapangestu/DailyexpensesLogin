@@ -138,5 +138,9 @@ public class HomeActivity extends ActionBarActivity {
         startActivity(intent);
     }
 
+    public void openInfo(View view){
+        Intent intent = new Intent(getApplication(),Info.class);
+        startActivity(intent);
+    }
 
 }
