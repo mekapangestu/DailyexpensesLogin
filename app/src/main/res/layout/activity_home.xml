@@ -16,7 +16,9 @@
         android:layout_marginTop="55dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="18dp"
+        android:layout_marginStart="18dp" />
 
     <ImageButton
         android:layout_width="64dp"
@@ -34,9 +36,11 @@
         android:id="@+id/imageButton4"
         android:onClick="openCashFlow"
         android:background="@mipmap/cashflow"
-        android:layout_alignTop="@+id/imageButton"
+        android:layout_above="@+id/imageButton9"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="19dp"
+        android:layout_marginEnd="19dp" />
 
     <ImageButton
         android:layout_width="64dp"
@@ -112,11 +116,14 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Pemasukan"
         android:id="@+id/textView13"
-        android:layout_below="@+id/imageButton"
-        android:layout_alignRight="@+id/imageButton"
-        android:layout_alignEnd="@+id/imageButton"
         android:textSize="12dp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_alignTop="@+id/textView14"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/imageButton"
+        android:layout_alignEnd="@+id/imageButton" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -152,13 +159,13 @@
         android:id="@+id/textView16"
         android:textSize="12dp"
         android:layout_below="@+id/imageButton9"
-        android:layout_alignLeft="@+id/textView13"
-        android:layout_alignStart="@+id/textView13"
         android:layout_alignRight="@+id/imageButton9"
         android:layout_alignEnd="@+id/imageButton9"
         android:textAlignment="center"
         android:textStyle="bold"
-        android:gravity="center" />
+        android:gravity="center"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -198,11 +205,13 @@
         android:id="@+id/textView19"
         android:textSize="12dp"
         android:onClick="openReminder"
-        android:layout_below="@+id/imageButton10"
-        android:layout_alignLeft="@+id/textView16"
-        android:layout_alignStart="@+id/textView16"
         android:textStyle="bold"
-        android:gravity="center" />
+        android:gravity="center"
+        android:layout_alignTop="@+id/textView20"
+        android:layout_alignLeft="@+id/imageButton10"
+        android:layout_alignStart="@+id/imageButton10"
+        android:layout_alignRight="@+id/imageButton10"
+        android:layout_alignEnd="@+id/imageButton10" />
 
     <TextView
         android:layout_width="wrap_content"

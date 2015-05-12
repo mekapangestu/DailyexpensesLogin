@@ -82,6 +82,7 @@ public class Reminder extends ActionBarActivity implements OnClickListener {
         LinearLayout layoutInput = new LinearLayout(this);
         layoutInput.setOrientation(LinearLayout.VERTICAL);
         builderDelete.setView(layoutInput);
+        builderDelete.setMessage("Apakah anda yakin?");
         builderDelete.setPositiveButton("Hapus",
                 new DialogInterface.OnClickListener() {
                     @Override
@@ -127,14 +128,14 @@ public class Reminder extends ActionBarActivity implements OnClickListener {
     }
 
     public void addNewReminder(View view){
-
         String tanggal = txtDate.getText().toString();
         String pesan = txtPesan.getText().toString();
-
-        db.tambahReminder(tanggal, pesan);
-        this.callHomePage(view);
-
-
+        if (tanggal.matches("") || pesan.matches("")){
+            Toast.makeText(getApplicationContext(), "Input tidak boleh kosong", Toast.LENGTH_SHORT).show();
+        }else{
+            db.tambahReminder(tanggal, pesan);
+            this.callHomePage(view);
+        }
     }
 
     public void callHomePage(View view){

@@ -56,6 +56,7 @@ public class PengeluaranRutin extends ActionBarActivity {
         LinearLayout layoutInput = new LinearLayout(this);
         layoutInput.setOrientation(LinearLayout.VERTICAL);
         builderDelete.setView(layoutInput);
+        builderDelete.setMessage("Apakah anda yakin?");
         builderDelete.setPositiveButton("Hapus",
                 new DialogInterface.OnClickListener() {
                     @Override
